@@ -10,6 +10,13 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    //MARK Outlet
+    
+    
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
