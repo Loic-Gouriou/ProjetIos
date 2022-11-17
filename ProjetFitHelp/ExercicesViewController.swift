@@ -56,7 +56,7 @@ class ExercicesViewController: UIViewController {
         let config = URLSessionConfiguration.default
         let session = URLSession(configuration: config)
         
-        var url = URL(string: "https://wger.de/api/v2/exercise/?format=json&limit=386")!
+        var url = URL(string: "https://wger.de/api/v2/exercise/?format=json&limit=386&language=2")!
         
         let task = session.dataTask(with: url) { (data, response, error) in
             if error != nil {
@@ -103,7 +103,10 @@ class ExercicesViewController: UIViewController {
 extension ExercicesViewController: UITableViewDelegate {
     
     func tableView(_  tableView: UITableView, didSelectRowAt indexPath: IndexPath){
-        print(exs[indexPath.row])
+        if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "DetailViewController") as? DetailViewController {
+                    
+                    self.navigationController?.pushViewController(vc, animated: true)
+                }
     }
     
 }

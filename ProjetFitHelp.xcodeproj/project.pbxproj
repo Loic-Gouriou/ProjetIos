@@ -45,6 +45,7 @@
 		7150C11E2924FDA000836A22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7150C11D2924FDA000836A22 /* Assets.xcassets */; };
 		7150C1212924FDA000836A22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7150C11F2924FDA000836A22 /* LaunchScreen.storyboard */; };
 		717A2F3729252CC900C1B523 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717A2F3629252CC900C1B523 /* LoginController.swift */; };
+		835D748A292691D100D02A8A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835D7489292691D100D02A8A /* DetailViewController.swift */; };
 		8415D9862926898B00B37B53 /* ExercicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8415D9852926898B00B37B53 /* ExercicesViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +63,7 @@
 		7150C1202924FDA000836A22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7150C1222924FDA000836A22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		717A2F3629252CC900C1B523 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		835D7489292691D100D02A8A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		8415D9852926898B00B37B53 /* ExercicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercicesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -125,6 +127,7 @@
 				7150C1142924FD9F00836A22 /* AppDelegate.swift */,
 				7150C1162924FD9F00836A22 /* SceneDelegate.swift */,
 				717A2F3629252CC900C1B523 /* LoginController.swift */,
+				835D7489292691D100D02A8A /* DetailViewController.swift */,
 				714E5255292545FF00472BDD /* InscriptionController.swift */,
 				7150C1182924FD9F00836A22 /* ViewController.swift */,
 				7150C11A2924FD9F00836A22 /* Main.storyboard */,
@@ -243,6 +246,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				835D748A292691D100D02A8A /* DetailViewController.swift in Sources */,
 				714E5219292534BB00472BDD /* SignUpController.swift in Sources */,
 				717A2F3729252CC900C1B523 /* LoginController.swift in Sources */,
 				8415D9862926898B00B37B53 /* ExercicesViewController.swift in Sources */,
