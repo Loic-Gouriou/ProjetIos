@@ -59,7 +59,7 @@
             <objects>
                 <viewController id="kti-MV-0rv" customClass="LoginViewController" customModule="ProjetFitHelp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZZK-1B-g79">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="login" translatesAutoresizingMaskIntoConstraints="NO" id="FvJ-2w-Cds">
@@ -67,7 +67,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="oZ5-Az-lUq">
-                                <rect key="frame" x="70" y="332" width="274" height="150"/>
+                                <rect key="frame" x="70" y="308" width="274" height="150"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Adresse Mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="34q-mz-6IO" userLabel="AdresseMail">
                                         <rect key="frame" x="0.0" y="0.0" width="274" height="50"/>
@@ -150,11 +150,11 @@
             <objects>
                 <viewController id="YtT-L6-XqD" customClass="InscriptiobController" customModule="ProjetFitHelp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8fH-Vv-YJj">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="0P3-Df-Qnv">
-                                <rect key="frame" x="138" y="323" width="138.5" height="250"/>
+                                <rect key="frame" x="138" y="294" width="138.5" height="250"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nom d'utilisateur" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="brw-M7-nd4">
                                         <rect key="frame" x="0.0" y="0.0" width="138.5" height="50"/>
@@ -229,7 +229,7 @@
             <objects>
                 <viewController id="v7u-7h-ViW" customClass="ExoController" customModule="ProjetFitHelp" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KvX-M3-xMY">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hv-rz-Q9v">
@@ -239,12 +239,23 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DBu-Md-UNe">
+                                <rect key="frame" x="247" y="140" width="75" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="deconexxionbuttonpressed:" destination="v7u-7h-ViW" eventType="touchUpInside" id="VkE-nI-E5j"/>
+                                    <segue destination="kti-MV-0rv" kind="show" id="hUE-pK-aTk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Evk-dy-RI3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="N85-Nn-DiO"/>
                     <connections>
+                        <outlet property="buttondeco" destination="DBu-Md-UNe" id="UqT-aa-nuf"/>
                         <outlet property="nameLabel" destination="3hv-rz-Q9v" id="dj5-yx-zw8"/>
                     </connections>
                 </viewController>
@@ -273,6 +284,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="bQs-Fl-UYN"/>
+        <segue reference="hUE-pK-aTk"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="login" width="1080" height="1920"/>

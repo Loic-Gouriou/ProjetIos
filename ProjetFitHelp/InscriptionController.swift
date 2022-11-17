@@ -8,6 +8,8 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseDatabase
+import FirebaseDatabaseSwift
 
 class InscriptiobController: UIViewController {
     
@@ -35,6 +37,15 @@ class InscriptiobController: UIViewController {
                     print(error.debugDescription)
                 } else{
                     print("Inscription de \(self.utilisateurTextField.text ?? "no name") réussi ✓")
+                    
+                    let ref = Database.database(url: "https://fithelp-4f16b-default-rtdb.europe-west1.firebasedatabase.app").reference()
+                    let utilisateurID = Auth.auth().currentUser?.uid
+                    
+                    
+                    
+                    
+                    ref.child("users").child(utilisateurID!).setValue(["utilisateur":self.utilisateurTextField.text!])
+                    
                     self.performSegue(withIdentifier: "GoToHome", sender: self)
                 }
             }

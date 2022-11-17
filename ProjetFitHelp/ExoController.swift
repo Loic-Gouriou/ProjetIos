@@ -7,31 +7,47 @@
 
 import UIKit
 import Firebase
+import FirebaseAuth
+import FirebaseDatabase
 
 class ExoController: UIViewController {
     
     @IBOutlet weak var nameLabel: UILabel!
     
+    @IBOutlet weak var buttondeco: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         
         if let user = Auth.auth().currentUser {
-            nameLabel.text = user.email
-        } else{
-            fatalError("Erreur : Aucun utilisteur est connecté lors de l'affichage de l'écran d'accueil")
+            
+            let ref = Database.database(url: "https://fithelp-4f16b-default-rtdb.europe-west1.firebasedatabase.app").reference()
+            let utilisateurID = Auth.auth().currentUser?.uid
+            
+            ref.child("users").child(utilisateurID!).observeSingleEvent(of: .value) { (snapshot) in
+                let value = snapshot.value as? NSDictionary
+                
+                let utilisateur = value?["utilisateur"] as? String ?? "Pas d'utilisateur"
+                
+                self.nameLabel.text = utilisateur
+            }
+            
+            
+        } else {
+            
+            fatalError("Erreur : Aucun utilisateur ne peut etre connecté")
+            
         }
-        
-        
-        
-        /*
-         // MARK: - Navigation
-         
-         // In a storyboard-based application, you will often want to do a little preparation before navigation
-         override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-         // Get the new view controller using segue.destination.
-         // Pass the selected object to the new view controller.
-         }
-         */
-        
     }
+    
+    @IBAction func deconexxionbuttonpressed(_ sender: UIButton) {
+        
+        do {
+            try Auth.auth().signOut()
+            dismiss(animated: true, completion: nil)
+        } catch {
+            print("Impossible de déconnecter l'utilisateur")
+        }
+
+    }
+    
 }
