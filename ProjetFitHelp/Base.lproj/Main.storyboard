@@ -221,23 +221,48 @@
             </objects>
             <point key="canvasLocation" x="2184" y="886"/>
         </scene>
-        <!--Exo Controller-->
+        <!--Exercices View Controller-->
         <scene sceneID="VPR-ww-L0K">
             <objects>
-                <viewController id="v7u-7h-ViW" customClass="ExoController" customModule="ProjetFitHelp" sceneMemberID="viewController">
+                <viewController id="v7u-7h-ViW" customClass="ExercicesViewController" customModule="ProjetFitHelp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KvX-M3-xMY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hv-rz-Q9v">
-                                <rect key="frame" x="20" y="334" width="374" height="21"/>
+                                <rect key="frame" x="176" y="738" width="374" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wvo-mQ-RHH">
+                                <rect key="frame" x="0.0" y="731" width="168" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Page chronometre"/>
+                                <connections>
+                                    <segue destination="3xv-7N-T62" kind="presentation" id="uvV-uL-OtO"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="wFR-As-5Wv">
+                                <rect key="frame" x="0.0" y="48" width="414" height="622"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="622" id="PWi-z3-jwu"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="baI-JB-OtY">
+                                        <rect key="frame" x="0.0" y="50" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="baI-JB-OtY" id="qw5-L1-wqj">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DBu-Md-UNe">
-                                <rect key="frame" x="247" y="140" width="75" height="35"/>
+                                <rect key="frame" x="255" y="731" width="75" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
@@ -246,28 +271,27 @@
                                     <segue destination="kti-MV-0rv" kind="show" id="hUE-pK-aTk"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wvo-mQ-RHH">
-                                <rect key="frame" x="104" y="676" width="165" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Page chronometre"/>
-                                <connections>
-                                    <segue destination="3xv-7N-T62" kind="presentation" id="uvV-uL-OtO"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Evk-dy-RI3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Evk-dy-RI3" firstAttribute="trailing" secondItem="wFR-As-5Wv" secondAttribute="trailing" id="FAk-vt-Uzl"/>
+                            <constraint firstItem="wFR-As-5Wv" firstAttribute="leading" secondItem="Wvo-mQ-RHH" secondAttribute="leading" id="PTR-PR-2ze"/>
+                            <constraint firstItem="wFR-As-5Wv" firstAttribute="leading" secondItem="Evk-dy-RI3" secondAttribute="leading" id="aKW-v5-Wd7"/>
+                            <constraint firstItem="Wvo-mQ-RHH" firstAttribute="top" secondItem="wFR-As-5Wv" secondAttribute="bottom" constant="26" id="fZY-x1-IYJ"/>
+                            <constraint firstItem="wFR-As-5Wv" firstAttribute="top" secondItem="Evk-dy-RI3" secondAttribute="top" id="xDj-C3-rRq"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="N85-Nn-DiO"/>
                     <connections>
-                        <outlet property="buttondeco" destination="DBu-Md-UNe" id="UqT-aa-nuf"/>
-                        <outlet property="nameLabel" destination="3hv-rz-Q9v" id="dj5-yx-zw8"/>
+                        <outlet property="buttondeco" destination="DBu-Md-UNe" id="dq8-jS-WID"/>
+                        <outlet property="nameLabel" destination="3hv-rz-Q9v" id="Pdl-FL-UUD"/>
+                        <outlet property="tableView" destination="wFR-As-5Wv" id="hNo-YW-9hN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="adR-mB-a4R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1628" y="1615"/>
+            <point key="canvasLocation" x="1627.536231884058" y="1614.5089285714284"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="bqS-7m-J1C">
