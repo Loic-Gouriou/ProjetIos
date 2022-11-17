@@ -143,7 +143,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J1Q-Fr-ISw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1798.5507246376812" y="137.94642857142856"/>
+            <point key="canvasLocation" x="1042" y="886"/>
         </scene>
         <!--Inscriptiob Controller-->
         <scene sceneID="Kqt-gM-oM4">
@@ -154,19 +154,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="0P3-Df-Qnv">
-                                <rect key="frame" x="138" y="294" width="138.5" height="250"/>
+                                <rect key="frame" x="138" y="302" width="138.5" height="234"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nom d'utilisateur" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="brw-M7-nd4">
-                                        <rect key="frame" x="0.0" y="0.0" width="138.5" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="138.5" height="34"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="VCT-KH-dto"/>
-                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" textContentType="username"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rMI-Nz-Tmy">
-                                        <rect key="frame" x="0.0" y="100" width="138.5" height="50"/>
+                                        <rect key="frame" x="0.0" y="84" width="138.5" height="50"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="18V-fr-505"/>
@@ -175,7 +172,7 @@
                                         <textInputTraits key="textInputTraits" textContentType="email"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mot de passe" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1ST-ll-wQG" userLabel="Mot de passe">
-                                        <rect key="frame" x="0.0" y="200" width="138.5" height="50"/>
+                                        <rect key="frame" x="0.0" y="184" width="138.5" height="50"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="HlT-fk-VJE"/>
@@ -222,7 +219,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cTX-sw-am1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2709" y="461"/>
+            <point key="canvasLocation" x="2184" y="886"/>
         </scene>
         <!--Exo Controller-->
         <scene sceneID="VPR-ww-L0K">
@@ -249,6 +246,15 @@
                                     <segue destination="kti-MV-0rv" kind="show" id="hUE-pK-aTk"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wvo-mQ-RHH">
+                                <rect key="frame" x="104" y="676" width="165" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Page chronometre"/>
+                                <connections>
+                                    <segue destination="3xv-7N-T62" kind="presentation" id="uvV-uL-OtO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Evk-dy-RI3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -261,7 +267,34 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="adR-mB-a4R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1798.5507246376812" y="833.70535714285711"/>
+            <point key="canvasLocation" x="1628" y="1615"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="bqS-7m-J1C">
+            <objects>
+                <viewController id="3xv-7N-T62" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xfi-Jg-ss1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Page du chrono" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="462-ns-9OM">
+                                <rect key="frame" x="74" y="48" width="266" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NR1-EX-YZX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="462-ns-9OM" firstAttribute="centerX" secondItem="xfi-Jg-ss1" secondAttribute="centerX" id="FKF-qM-fO8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="jra-mH-vkF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3fC-fD-4Jg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2571" y="1622"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bGC-Q6-1qg">
@@ -283,7 +316,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="bQs-Fl-UYN"/>
+        <segue reference="UQ0-13-TaF"/>
         <segue reference="hUE-pK-aTk"/>
     </inferredMetricsTieBreakers>
     <resources>
