@@ -31,7 +31,8 @@ class LoginViewController: UIViewController {
                 self.performSegue(withIdentifier: "GoToHome2", sender: self)
             }
             
-            
+            self.emailTextField.text?.removeAll()
+            self.passwordTextField.text?.removeAll()
         }
     }
     

@@ -93,6 +93,8 @@ class ExercicesViewController: UIViewController {
             print("Impossible de déconnecter l'utilisateur")
         }
 
+       
+        
     }
 
 
