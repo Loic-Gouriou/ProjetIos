@@ -93,25 +93,27 @@ class ExercicesViewController: UIViewController {
             print("Impossible de déconnecter l'utilisateur")
         }
 
-       
-        
     }
 
 
-}
+    
 
+}
 
 
 extension ExercicesViewController: UITableViewDelegate {
     
     func tableView(_  tableView: UITableView, didSelectRowAt indexPath: IndexPath){
-        if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "DetailViewController") as? DetailViewController {
-                    
-                    self.navigationController?.pushViewController(vc, animated: true)
-                }
+          if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "DetailViewController") as? DetailViewController {
+         
+              vc.exerciceName = exs[indexPath.row]
+         self.navigationController?.pushViewController(vc, animated: true)
+         }
+         
+         
+         
+         }
     }
-    
-}
 
 
 extension ExercicesViewController: UITableViewDataSource {

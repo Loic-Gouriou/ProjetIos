@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		712478E82926C6DD003D1204 /* intro.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 712478E72926C6DD003D1204 /* intro.mp4 */; };
 		714E5219292534BB00472BDD /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714E5218292534BB00472BDD /* SignUpController.swift */; };
 		714E521D2925412400472BDD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 714E521C2925412400472BDD /* GoogleService-Info.plist */; };
 		714E5220292543A800472BDD /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 714E521F292543A800472BDD /* FirebaseAnalytics */; };
@@ -51,7 +50,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		712478E72926C6DD003D1204 /* intro.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = intro.mp4; path = ../../../../Desktop/intro.mp4; sourceTree = "<group>"; };
 		714E5218292534BB00472BDD /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
 		714E521C2925412400472BDD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		714E5255292545FF00472BDD /* InscriptionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InscriptionController.swift; sourceTree = "<group>"; };
@@ -138,7 +136,6 @@
 				714E5218292534BB00472BDD /* SignUpController.swift */,
 				7150C11D2924FDA000836A22 /* Assets.xcassets */,
 				7150C11F2924FDA000836A22 /* LaunchScreen.storyboard */,
-				712478E72926C6DD003D1204 /* intro.mp4 */,
 				7150C1222924FDA000836A22 /* Info.plist */,
 				714E521C2925412400472BDD /* GoogleService-Info.plist */,
 			);
@@ -237,7 +234,6 @@
 			files = (
 				7150C1212924FDA000836A22 /* LaunchScreen.storyboard in Resources */,
 				714E521D2925412400472BDD /* GoogleService-Info.plist in Resources */,
-				712478E82926C6DD003D1204 /* intro.mp4 in Resources */,
 				7150C11E2924FDA000836A22 /* Assets.xcassets in Resources */,
 				7150C11C2924FD9F00836A22 /* Main.storyboard in Resources */,
 			);
